@@ -12,8 +12,7 @@ cifar10_labels = [
 ]
 
 st.title("🧠 CIFAR-10 Image Classifier")
-st.write("Upload an image("airplane", "automobile", "bird", "cat", "deer",
-    "dog", "frog", "horse", "ship", "truck"), let the model predict!")
+st.write("Upload an image and let the model predict!")
 
 uploaded_file = st.file_uploader("Choose an image", type=["jpg", "png", "jpeg"])
 
@@ -29,4 +28,5 @@ if uploaded_file:
     st.image(img, caption="Uploaded Image", width=200)
     st.success(f"Prediction: **{cifar10_labels[class_idx]}**")
     st.info(f"Confidence: **{confidence:.2f}**")
+
 
